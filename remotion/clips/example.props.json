@@ -1,0 +1,252 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "fps": 30,
+ "durationInFrames": 285,
+ "contentStart": 1.5,
+ "layoutStart": 1,
+ "fonts": [
+  {
+   "family": "MomoTrustDisplay",
+   "src": "fonts/MomoTrustDisplay-Regular.ttf"
+  },
+  {
+   "family": "Archivo-Medium",
+   "src": "fonts/Archivo-Medium.ttf"
+  },
+  {
+   "family": "Archivo-SemiBold",
+   "src": "fonts/Archivo-SemiBold.ttf"
+  }
+ ],
+ "audio": "clips/example/audio.m4a",
+ "audioWav": "clips/example/audio.wav",
+ "background": "layout/bg.png",
+ "blueShape": "layout/blue.png",
+ "redCircle": "layout/red_circle.png",
+ "portrait": {
+  "src": "clips/example/portrait.png",
+  "scale": 1.1659289187643025,
+  "dy": -31.255813953488385
+ },
+ "spectrum": {
+  "dy": -223.6744186046512,
+  "xs": [
+   33,
+   67,
+   101,
+   135,
+   169,
+   203,
+   237,
+   271,
+   305,
+   339,
+   729,
+   763,
+   797,
+   831,
+   865,
+   899,
+   933,
+   967,
+   1001,
+   1035
+  ],
+  "barWidth": 16,
+  "baselineY": 1078.3255813953488,
+  "halfMin": 12,
+  "halfClip": 64,
+  "colors": [
+   "#E8242B",
+   "#1F56D6",
+   "#F4C40E"
+  ]
+ },
+ "title": {
+  "text": "Judul Klip Di Sini?",
+  "font": "Archivo-Medium",
+  "size": 34,
+  "tracking": 6,
+  "kerning": "none",
+  "color": "#000000",
+  "baseline": 138.5,
+  "ascent": 0.878,
+  "descent": 0.21
+ },
+ "speakerName": {
+  "text": "PDT. NAMA PEMBICARA",
+  "font": "Archivo-SemiBold",
+  "size": 30,
+  "tracking": 7.6,
+  "kerning": "none",
+  "color": "#FFFFFF",
+  "baseline": 1668,
+  "ascent": 0.878,
+  "descent": 0.21
+ },
+ "captions": {
+  "font": "MomoTrustDisplay",
+  "size": 86,
+  "ascent": 1.025,
+  "descent": 0.275,
+  "black": "#000000",
+  "red": "#E8242B",
+  "kernOverrides": {
+   "Al": -30
+  },
+  "pages": [
+   {
+    "show": 0,
+    "hide": 2.8,
+    "lines": [
+     {
+      "baseline": 426.59302325581405,
+      "words": [
+       {
+        "text": "Ini",
+        "start": 0,
+        "end": 0.4,
+        "x": 150.635,
+        "verse": false
+       },
+       {
+        "text": "contoh",
+        "start": 0.4,
+        "end": 0.9,
+        "x": 273.013,
+        "verse": false
+       },
+       {
+        "text": "caption",
+        "start": 0.9,
+        "end": 1.4,
+        "x": 596.8889999999999,
+        "verse": false
+       }
+      ]
+     },
+     {
+      "baseline": 512.593023255814,
+      "words": [
+       {
+        "text": "dari",
+        "start": 1.4,
+        "end": 1.7,
+        "x": 166.373,
+        "verse": false
+       },
+       {
+        "text": "Tuhan",
+        "start": 1.7,
+        "end": 2.2,
+        "x": 357.72299999999996,
+        "verse": false
+       },
+       {
+        "text": "Yesus.",
+        "start": 2.2,
+        "end": 2.8,
+        "x": 643.2429999999999,
+        "verse": false
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "show": 2.8,
+    "hide": 5.4,
+    "lines": [
+     {
+      "baseline": 426.59302325581405,
+      "words": [
+       {
+        "text": "\"Lorem",
+        "start": 3,
+        "end": 3.5,
+        "x": 113.87,
+        "verse": true
+       },
+       {
+        "text": "ipsum",
+        "start": 3.5,
+        "end": 4,
+        "x": 451.334,
+        "verse": true
+       },
+       {
+        "text": "dolor",
+        "start": 4,
+        "end": 4.5,
+        "x": 734.36,
+        "verse": true
+       }
+      ]
+     },
+     {
+      "baseline": 512.593023255814,
+      "words": [
+       {
+        "text": "sit",
+        "start": 4.5,
+        "end": 4.8,
+        "x": 337.04,
+        "verse": true
+       },
+       {
+        "text": "amet.\"",
+        "start": 4.8,
+        "end": 5.4,
+        "x": 461.396,
+        "verse": true
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "show": 5.4,
+    "hide": 18,
+    "lines": [
+     {
+      "baseline": 426.59302325581405,
+      "words": [
+       {
+        "text": "Amin.",
+        "start": 5.8,
+        "end": 6.4,
+        "x": 415.90200000000004,
+        "verse": false
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "verses": [
+  {
+   "start": 2.8,
+   "end": 5.4,
+   "ref": "Kitab 1:1–3"
+  }
+ ],
+ "verseLabel": {
+  "font": "Archivo-Medium",
+  "size": 34,
+  "tracking": 0,
+  "kerning": "normal",
+  "color": "#000000",
+  "baseline": 802.5,
+  "ascent": 0.878,
+  "descent": 0.21
+ },
+ "intro": {
+  "cover": "clips/example/cover.png",
+  "coverColor": "#E8242B",
+  "hold": 0.5,
+  "wipe": 1
+ },
+ "soundtrack": null
+}

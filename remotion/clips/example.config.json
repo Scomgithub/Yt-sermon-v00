@@ -1,0 +1,15 @@
+{
+ "name": "example",
+ "audio": "/path/to/work/footage_dfn_lufs.mp4",
+ "words": "/path/to/work/words.json",
+ "script": "/path/to/work/clip-script.md",
+ "timeline": null,
+ "title": "Judul Klip Di Sini?",
+ "speakerName": "PDT. NAMA PEMBICARA",
+ "portrait": "/path/to/work/portrait_color.png",
+ "cover": "/path/to/work/cover.png",
+ "coverColor": "#E8242B",
+ "spectrumVideo": null,
+ "verses": [{"startsWith": "Lorem", "ref": "Kitab 1:1–3"}],
+ "soundtrack": null
+}

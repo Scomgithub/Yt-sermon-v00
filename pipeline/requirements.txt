@@ -1,0 +1,6 @@
+numpy
+pillow
+fonttools
+faster-whisper
+deepfilternet
+yt-dlp

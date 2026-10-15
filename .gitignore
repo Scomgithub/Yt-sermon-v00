@@ -1,0 +1,15 @@
+node_modules/
+out/
+media/
+work/
+*.mp4
+*.wav
+*.mov
+*.m4a
+*.mp3
+*.webm
+remotion/public/clips/
+remotion/public/fonts/
+.venv/
+__pycache__/
+.DS_Store

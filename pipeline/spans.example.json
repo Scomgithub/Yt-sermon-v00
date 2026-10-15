@@ -1,0 +1,6 @@
+[
+ {"label": "HOOK",   "start": 496.30, "end": 503.10},
+ {"label": "BODY-1", "start": 146.20, "end": 152.40},
+ {"label": "VERSE",  "start": 328.30, "end": 368.50},
+ {"label": "ENDING", "start": 273.70, "end": 295.15, "fade_out": 0.06}
+]
