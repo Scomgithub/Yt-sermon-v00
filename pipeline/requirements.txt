@@ -4,3 +4,6 @@ fonttools
 faster-whisper
 deepfilternet
 yt-dlp
+rembg
+onnxruntime
+opencv-python-headless

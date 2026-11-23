@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Installs ffmpeg, yt-dlp, faster-whisper, DeepFilterNet (Python venv in .venv) and the Remotion Node deps.
+# Installs ffmpeg, yt-dlp, faster-whisper, DeepFilterNet, rembg, onnxruntime and OpenCV
+# (Python venv in .venv), Remotion Node deps, and the Real-ESRGAN x4plus ONNX weights.
 # macOS (Homebrew) or Debian/Ubuntu (apt). Node 18+ is required for Remotion.
 set -euo pipefail
 cd "$(dirname "$0")"
@@ -19,6 +20,7 @@ NODE_MAJOR=$(node -p 'process.versions.node.split(".")[0]')
 "$PY" -m venv .venv
 .venv/bin/pip install --upgrade pip
 .venv/bin/pip install -r pipeline/requirements.txt
+pipeline/download_models.sh
 mkdir -p remotion/public/fonts
 cp fonts/*/*.ttf remotion/public/fonts/
 (cd remotion && npm ci)

@@ -13,3 +13,8 @@ remotion/public/fonts/
 .venv/
 __pycache__/
 .DS_Store
+
+# Model weights (download with pipeline/download_models.sh)
+*.onnx
+pipeline/models/*
+!pipeline/models/.gitkeep
