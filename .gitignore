@@ -8,13 +8,28 @@ work/
 *.m4a
 *.mp3
 *.webm
-remotion/public/clips/
-remotion/public/fonts/
 .venv/
 __pycache__/
 .DS_Store
 
-# Model weights (download with pipeline/download_models.sh)
+# Other ONNX weights stay out; ship Real-ESRGAN x4plus
 *.onnx
 pipeline/models/*
 !pipeline/models/.gitkeep
+!pipeline/models/RealESRGAN_x4plus.onnx
+
+# Keep future clip media local; ship this example's Remotion assets
+remotion/public/clips/*
+!remotion/public/clips/Ku2-1511-26-sermon-sermon-podcast-joke/
+!remotion/public/clips/Ku2-1511-26-sermon-sermon-podcast-joke/**
+!remotion/public/clips/Ku2-1511-26-sermon-sermon-podcast-joke/**/*.m4a
+!remotion/public/clips/Ku2-1511-26-sermon-sermon-podcast-joke/**/*.wav
+!remotion/public/clips/Ku2-1511-26-sermon-sermon-podcast-joke/**/*.mp4
+!remotion/public/clips/Ku2-1511-26-sermon-sermon-podcast-joke/**/*.mp3
+
+# Example finished clip
+!examples/**/*.mp4
+!examples/**/*.wav
+!examples/**/*.m4a
+!examples/**/*.mov
+!examples/**/*.webm

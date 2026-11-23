@@ -10,7 +10,7 @@ the original HQ crop and applies that alpha to the ESRGAN colours. rembg on
 the 4x image can leak background and miss hands. Do not replace this step
 with an image-generation "upscaler": those change the speaker's likeness.
 
-The ONNX weights are not in the repo. Run pipeline/download_models.sh, or
+The ONNX weights ship in pipeline/models/RealESRGAN_x4plus.onnx. If that file is missing, run pipeline/download_models.sh, or
 pass --model /path/to/RealESRGAN_x4plus.onnx.
 """
 from __future__ import annotations

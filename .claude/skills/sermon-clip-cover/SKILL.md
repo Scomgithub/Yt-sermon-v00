@@ -7,7 +7,7 @@ description: >-
 ---
 # Sermon clip cover
 
-Use after a hookline is chosen and the section has been downloaded. Paths are repo-relative. Do not commit sermon media, model weights, or non-shareable fonts. Do not post the result.
+Use after a hookline is chosen and the section has been downloaded. Paths are repo-relative. Work files stay local; the repo already ships the ESRGAN weights, the OFL fonts, and one example clip. Do not post the result.
 
 ## 1. Grab a frame from the high-resolution stream
 
@@ -21,7 +21,7 @@ ffmpeg -y -ss <time-in-file> -i work/source.mp4 -frames:v 1 work/frames/speaker.
 
 Preserve likeness: use Real-ESRGAN x4plus (ONNX, CPU). Do **not** use an image-generation "upscaler"; those change the face and are rejected.
 
-Weights are not in the repo. `./setup.sh` calls `pipeline/download_models.sh`, or run that script on its own. The upscaler expects `RealESRGAN_x4plus.onnx` with input name `input`, shape `[1, 3, H, W]`, RGB float32 in 0..1.
+Weights ship in `pipeline/models/RealESRGAN_x4plus.onnx`. If that file is missing, `./setup.sh` calls `pipeline/download_models.sh`, or run that script on its own. The upscaler expects `RealESRGAN_x4plus.onnx` with input name `input`, shape `[1, 3, H, W]`, RGB float32 in 0..1.
 
 ```sh
 python pipeline/upscale_esrgan.py work/frames/speaker.png \
@@ -40,10 +40,10 @@ The outline is a sticker, not a tight path that eats into the person: fill holes
 python pipeline/make_cover.py --rgb work/frames/speaker_esrgan.png \
   --cut work/frames/speaker_cut.png -o work/cover.png \
   --line "First hook line" --line "accent|#E8242B" \
-  --speaker-name "PDT. NAME" --title-font /path/to/ArchivoBlack-Regular.ttf
+  --speaker-name "PDT. NAME"
 ```
 
-`--title-font` should be a heavy face such as Archivo Black (SIL OFL, not bundled). Without an outline, use `pipeline/make_cover_no_outline.py` with the same flags.
+`--title-font` defaults to the bundled Archivo Black at `fonts/ArchivoBlack/ArchivoBlack-Regular.ttf` (SIL OFL). Without an outline, use `pipeline/make_cover_no_outline.py` with the same flags.
 
 If you already have a 4x rembg that leaked, pass it as `--cut` and the original-frame rembg as `--guide` (with `--guide-crop` when the guide is still a full frame) so new leaks are clipped to that silhouette.
 

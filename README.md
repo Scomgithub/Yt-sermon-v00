@@ -75,7 +75,7 @@ ffmpeg -y -ss 18 -i work/source.mp4 -frames:v 1 work/frames/speaker.png
 Optional likeness-preserving upscale, then a rembg cutout. Real-ESRGAN x4plus (ONNX, CPU) is the
 upscaler to use; image-generation "upscalers" change the face and are rejected. Run rembg on the
 **original** HQ frame and apply that alpha to the ESRGAN colours — rembg on the 4x image can leak
-background and miss hands. Weights are not in the repo (`pipeline/download_models.sh`).
+background and miss hands. Weights are in `pipeline/models/RealESRGAN_x4plus.onnx` (`pipeline/download_models.sh` will fetch them if that file is missing).
 
 ```sh
 python pipeline/upscale_esrgan.py work/frames/speaker.png \
@@ -91,10 +91,10 @@ lip along the bottom crop edge):
 python pipeline/make_cover.py --rgb work/frames/speaker_esrgan.png \
   --cut work/frames/speaker_cut.png -o work/cover.png \
   --line "First line" --line "accent line|#E8242B" \
-  --speaker-name "PDT. NAME" --title-font /path/to/ArchivoBlack-Regular.ttf
+  --speaker-name "PDT. NAME"
 ```
 
-`--title-font` should be a heavy face such as Archivo Black (SIL OFL, not bundled here).
+`--title-font` defaults to the bundled Archivo Black at `fonts/ArchivoBlack/ArchivoBlack-Regular.ttf` (SIL OFL).
 Without an outline, use `pipeline/make_cover_no_outline.py` with the same flags. The circular
 in-video portrait can be rebuilt from the same sharpened frame with `pipeline/make_layout.py --portrait ...`.
 
@@ -140,11 +140,14 @@ with `scripts/sync-skills.sh --check`. `AGENTS.md` and `CLAUDE.md` point at thes
 | `sermon-clip-cover` | grabbing a frame, optional ESRGAN, rembg cutout, and the white sticker cover |
 | `sermon-reel-hook-and-caption` | writing cover hooklines and Instagram / TikTok / Threads captions |
 
-Do not commit sermon media, model weights, or non-shareable fonts. Do not post the clip to
-social media from this pipeline.
+Work files (`work/`, raw source downloads, intermediate footage) stay local. The repo already
+ships the Real-ESRGAN weights, the OFL fonts (including Archivo Black), and one example clip in
+`examples/Ku2-1511-26-sermon-sermon-podcast-joke/` plus its Remotion assets under
+`remotion/public/clips/` and `remotion/clips/`. Do not post the clip to social media from this
+pipeline.
 
 ## Licenses
 
-Code: MIT (`LICENSE`). Fonts: SIL OFL 1.1 (`fonts/`). Real-ESRGAN weights (downloaded separately)
+Code: MIT (`LICENSE`). Fonts: SIL OFL 1.1 (`fonts/`). Real-ESRGAN weights (`pipeline/models/RealESRGAN_x4plus.onnx`)
 are BSD-3-Clause, [xinntao/Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN). You are
 responsible for having the rights to the sermon footage you process.

@@ -20,5 +20,5 @@ Load the matching skill before you start:
 - Verse wording must match Alkitab TB exactly. Verse text at the top in quotes; one passage label for the whole reading, centered above the red circle.
 - The clip opens on the cover, then a 1-second eased colour wipe in the cover's colour.
 - The last spoken word must be heard in full.
-- Do not commit sermon media, model weights, or non-shareable fonts.
+- Work files stay local. The repo already ships the ESRGAN weights, the OFL fonts, and one example clip.
 - Never post the clip to social media.

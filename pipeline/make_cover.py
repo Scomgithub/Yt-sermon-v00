@@ -3,8 +3,7 @@
 
   python pipeline/make_cover.py --rgb work/frames/speaker_esrgan.png \
       --cut work/frames/speaker_cut.png -o work/cover.png \
-      --line "First line" --line "accent|#E8242B" --speaker-name "PDT. NAME" \
-      --title-font /path/to/ArchivoBlack-Regular.ttf
+      --line "First line" --line "accent|#E8242B" --speaker-name "PDT. NAME"
 
 Prefer Real-ESRGAN colours in --rgb and rembg alpha from the original HQ
 frame in --cut. rembg on the 4x image can leak background and miss hands.

@@ -38,7 +38,7 @@ LEFT_CLIP_STRIP = 90
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_NAME_FONT = REPO_ROOT / "fonts/Archivo/Archivo-SemiBold.ttf"
-DEFAULT_TITLE_FONT = DEFAULT_NAME_FONT
+DEFAULT_TITLE_FONT = REPO_ROOT / "fonts/ArchivoBlack/ArchivoBlack-Regular.ttf"
 
 
 def parse_color(s: str) -> tuple[int, int, int]:
@@ -440,6 +440,6 @@ def add_cover_cli(ap) -> None:
     ap.add_argument("--line", action="append", default=[], dest="lines",
                     help="cover line, optionally 'text|#RRGGBB' or 'text|red'. Repeatable.")
     ap.add_argument("--speaker-name", default="")
-    ap.add_argument("--title-font", help="headline font (Archivo Black recommended; not bundled)")
+    ap.add_argument("--title-font", help="headline font (defaults to bundled Archivo Black)")
     ap.add_argument("--name-font", default=str(DEFAULT_NAME_FONT))
     ap.add_argument("--no-decorations", action="store_true", help="skip the yellow and corner circles")

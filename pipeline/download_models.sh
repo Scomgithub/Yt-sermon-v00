@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Download Real-ESRGAN x4plus ONNX weights into pipeline/models/.
 # The weights are a format conversion of the official RealESRGAN_x4plus.pth
-# (xinntao/Real-ESRGAN, BSD-3-Clause). They are not committed to the repo.
+# (xinntao/Real-ESRGAN, BSD-3-Clause). The file is committed at this path;
+# this script is a fallback if it is missing.
 #
 # Input contract the upscaler expects:
 #   input  "input"  float32 [1, 3, H, W], RGB in 0..1, dynamic H/W

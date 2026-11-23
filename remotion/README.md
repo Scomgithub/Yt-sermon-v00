@@ -58,4 +58,4 @@ exactly like `render_captions_momo.py`: Momo Trust Display 86 px, line height 86
 - `src/SermonClip.tsx` – the composition (layers in CapCut track order)
 - `src/types.ts` – props schema
 - `scripts/build-props.mjs` – config → props + assets in `public/clips/<name>/`
-- `clips/example.config.json` / `example.props.json` – example with placeholder paths and dummy words (the props point at `public/clips/example/`, which is not in the repo; run build-props first)
+- `clips/example.config.json` / `example.props.json` – placeholder example (the props point at `public/clips/example/`; run build-props first). A real finished clip is committed as `clips/Ku2-1511-26-sermon-sermon-podcast-joke.*` with assets in `public/clips/Ku2-1511-26-sermon-sermon-podcast-joke/` and the rendered files in `examples/Ku2-1511-26-sermon-sermon-podcast-joke/`.

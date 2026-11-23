@@ -6,7 +6,7 @@ description: >-
 ---
 # Sermon clip pipeline
 
-Read this repository's `README.md` first and run `./setup.sh`. The work needs ffmpeg, yt-dlp, Python (faster-whisper, DeepFilterNet, rembg, onnxruntime, OpenCV), Node 18+ and Remotion. Paths below are repo-relative. Do not commit sermon media, model weights, or non-shareable fonts.
+Read this repository's `README.md` first and run `./setup.sh`. The work needs ffmpeg, yt-dlp, Python (faster-whisper, DeepFilterNet, rembg, onnxruntime, OpenCV), Node 18+ and Remotion. Paths below are repo-relative. Work files stay local; the repo already ships the ESRGAN weights, the OFL fonts, and one example clip.
 
 For the cover still, also load `sermon-clip-cover`. For hooklines and social captions, load `sermon-reel-hook-and-caption`.
 
